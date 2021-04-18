@@ -210,7 +210,7 @@ class Mustache
   # @param [Object] value Value to escape.
   # @return [String] Escaped content.
   def escape(value)
-    self.escapeHTML(value.to_s)
+    self.escapeHTML(value.to_s).force_encoding('UTF-8')
   end
   
   # Override this to provide custom escaping.
